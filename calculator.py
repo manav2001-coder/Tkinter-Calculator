@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from tkmacosx import Button 
 root = tk.Tk()
 root.title("Modern Calculator")
 
@@ -43,11 +43,7 @@ def clear():
 
 # 2. HELPER TO CREATE BUTTONS QUICKLY
 def create_button(text, row, col, cmd, color="#34495e", fg="white"):
-    btn = tk.Button(
-        root, text=text, font=BTN_FONT, bg=color, fg=fg,
-        relief="flat", activebackground="#1abc9c",
-        command=cmd, width=5, height=2
-    )
+    btn = Button(root, text=text, font=BTN_FONT, bg=color, fg=fg,relief="flat", activebackground="#1abc9c",command=cmd, width=5, height=2)
     btn.grid(row=row, column=col, padx=5, pady=5, sticky="nsew")
 
 # Row 1
